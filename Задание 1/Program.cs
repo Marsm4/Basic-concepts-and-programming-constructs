@@ -7,11 +7,16 @@ class Program
         // Ввод размера массива
         Console.Write("Введите размер массива n: ");
         int n = int.Parse(Console.ReadLine());
+        if (n > 100)
+        {
+            Console.WriteLine("Ошибка! Размер массива не должен превышать 100.");
+            return;
+        }
 
         // Ввод элементов массива
         int[,] mas = new int[n, n];
         Console.WriteLine("Введите элементы массива через пробел наприер 12 31 13 :");
-                                                                            
+        
         for (int i = 0; i < n; i++)
         {
             string[] input = Console.ReadLine().Split();
@@ -20,6 +25,7 @@ class Program
                 mas[i, j] = int.Parse(input[j]);
             }
         }
+
 
         // Вывод введенной матрицы
         Console.WriteLine("Введенная матрица:");
@@ -31,6 +37,7 @@ class Program
             }
             Console.WriteLine();
         }
+
 
         // Проверка на симметрию
         bool flag = true;
