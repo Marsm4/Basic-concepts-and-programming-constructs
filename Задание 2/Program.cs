@@ -1,6 +1,6 @@
 ﻿using System;
 
-        Console.WriteLine("задано число N — количество элементов в массиве");
+Console.WriteLine("задайте число n массива от 1 до 100");
         int n = Convert.ToInt32(Console.ReadLine());
         if (n > 100)
         {

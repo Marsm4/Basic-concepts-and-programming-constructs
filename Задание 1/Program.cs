@@ -1,9 +1,5 @@
 ﻿using System;
 
-class Program
-{
-    static void Main()
-    {
         // Ввод размера массива
         Console.Write("Введите размер массива n: ");
         int n = int.Parse(Console.ReadLine());
@@ -13,8 +9,14 @@ class Program
             return;
         }
 
-        // Ввод элементов массива
-        int[,] mas = new int[n, n];
+if (n < 0)
+{
+    Console.WriteLine("Ошибка! Размер массива не должен быть меньше 0");
+    return;
+}
+
+// Ввод элементов массива
+int[,] mas = new int[n, n];
         Console.WriteLine("Введите элементы массива через пробел наприер 12 31 13 :");
         
         for (int i = 0; i < n; i++)
@@ -62,5 +64,4 @@ class Program
             Console.WriteLine("Матрица не симметрична");
 
         Console.ReadKey();
-    }
-}
+   
