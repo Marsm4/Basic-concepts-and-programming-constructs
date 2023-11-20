@@ -7,9 +7,13 @@
             Console.WriteLine("Количество элементов в массиве должно быть не больше 100");
             return;
         }
+    if (n < 0)
+    {
+        Console.WriteLine("Количество элементов в массиве должно быть не меньше 0");
+        return;
+    }
 
-
-        Console.WriteLine("Далее запишите N чисел.");
+Console.WriteLine("Далее запишите N чисел.");
         int[] k = new int[n];
 
         for (int i = 0; i < n; i++)
